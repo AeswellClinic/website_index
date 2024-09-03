@@ -1001,15 +1001,15 @@ body, html {
   height: 1331px;
 }
 .iphone-14-15-pro-max-1 {
-  width: 100%;
-  position: relative;
-  background-color: var(--color-white);
-  height: 1563px;
-  overflow: hidden;
-  text-align: left;
-  font-size: var(--font-size-3xl-5);
-  color: var(--text);
-  font-family: var(--font-inter);
+    width: 100%;
+    position: relative;
+    background-color: var(--color-white);
+    min-height: 100vh; 
+    overflow: auto; 
+    text-align: left;
+    font-size: var(--font-size-3xl-5);
+    color: var(--text);
+    font-family: var(--font-inter);
 }
 
 
@@ -1018,79 +1018,72 @@ body, html {
   display: block; 
 }
 
-@media (max-width: 767px) {
-  .desktop-1 {
+
+@media (max-width: 690px) {
+    .desktop-1 {
+      display: none;
+    }
+  }
+  
+
+  .iphone-14-15-pro-max-1 {
     display: none;
   }
-}
-
-
-.iphone-14-15-pro-max-1 {
-  display: none;
-}
-
-@media (max-width: 767px) {
-  .iphone-14-15-pro-max-1 {
-    display: block; 
-  }
-}
-
-@media screen and (max-width: 1240px) {
-  body, html{
-    width: 100%;
-  }
-  .desktop-1 {
-   
-    width: 100% !important;
-    padding: 0px 0px 0px !important;
   
-}
-.frame-container{
-  padding: 90px 76px;
-}
-.welcome-container-wrapper{
-  z-index: 5;
-}
-.container1 {
-
-  top: -100%;  
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-
- 
-}
-
-}
-@media screen and (max-width: 820px) {
-  body, html{
-    width: 100%;
-   
-  }
-  .container1 {
-
-    top: -83%;  
-    left: 50%;
-    transform: translate(-50%, -50%); 
-}
-.desktop-1{
-  padding: 0px 0px 135px !important;
-}
-.frame-container {
-  padding: 0px 4px;
-}
-.frame-div{
-  gap: 0px;
-}
-.testimonial-container-parent{
-  z-index: 10;
-  margin-top: 100px;
-}
-.frame-group{
-  gap: 115px;
-}
   
-}
-
+  @media (max-width: 691px) {
+    .iphone-14-15-pro-max-1 {
+      display: block; 
+    }
+  }
   
 
+  @media screen and (max-width: 1240px) {
+    body, html {
+      width: 100%;
+    }
+    .desktop-1 {
+      width: 100% !important;
+      padding: 0px !important;
+    }
+    .frame-container {
+      padding: 90px 76px;
+    }
+    .welcome-container-wrapper {
+      z-index: 5;
+    }
+    .container1 {
+      top: -100%;  
+      left: 50%; 
+      transform: translate(-50%, -50%);
+    }
+  }
+  
 
+  @media screen and (min-width: 480px) and (max-width: 690px) {
+    body, html {
+      width: 100%;
+    }
+    .container1 {
+      top: -83%;  
+      left: 50%;
+      transform: translate(-50%, -50%); 
+    }
+    .desktop-1 {
+      padding: 0px 0px 135px !important;
+    }
+    .frame-container {
+      padding: 0px 4px;
+    }
+    .frame-div {
+      gap: 0px;
+    }
+    .testimonial-container-parent {
+      z-index: 10;
+      margin-top: 100px;
+    }
+    .frame-group {
+      gap: 115px;
+    }
+  }
+  
