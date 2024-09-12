@@ -2,15 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body, html {
-
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 .container {
   max-width: 1200px; 
   margin: 0 auto;
   padding: 0 20px; 
+  margin-bottom: 50px;
 }
 
 .desktop-1 {
@@ -609,13 +613,19 @@ body, html {
     overflow: hidden;
     flex-direction: column;
     align-items: flex-end;
-    padding: 0px 0px 121px;
+
     box-sizing: border-box;
     gap: var(--gap-55xl);
     line-height: normal;
     letter-spacing: normal;
   }
-
+  iframe {
+    width: 100%;
+    min-height: 582px;
+    height: auto;
+    border: none;
+    margin-top: 10px;
+}
   
 
 /* มือถือ */
@@ -729,6 +739,7 @@ body, html {
   top: 0;
   width: 380px;
   height: 566px;
+  
 }
 .group-wrapper {
   left: 0;
@@ -1041,7 +1052,6 @@ body, html {
   justify-content: center; 
   align-items: center; 
   width: 100%; 
- 
   position: relative;
   background-color: var(--color-white); 
   text-align: center;
@@ -1052,48 +1062,77 @@ body, html {
 
 
 
+
 .desktop-1 {
   display: block; 
 }
 
-/* ตั้งค่าอนิเมชั่นสำหรับการแสดงการ์ดแต่ละอัน */
+
 .overlayborderoverlayblur3,
 .overlayborderoverlayblur4,
 .overlayborderoverlayblur5{
     animation: fadeInOut 3s ease-in-out forwards;
-    opacity: 0; /* เริ่มต้นโดยให้การ์ดจางหายไป */
+    opacity: 0; 
 }
 
-/* หน่วงเวลาแสดงการ์ดแต่ละอัน */
+
 .overlayborderoverlayblur3 {
-    animation-delay: 0s; /* การ์ดแรกแสดงทันที */
+    animation-delay: 0s; 
 }
 
 .overlayborderoverlayblur4 {
-    animation-delay: 1s; /* การ์ดที่สองแสดงหลังจาก 1 วินาที */
+    animation-delay: 1s; 
 }
 
 .overlayborderoverlayblur5{
-    animation-delay: 2s; /* การ์ดที่สามแสดงหลังจาก 2 วินาที */
+    animation-delay: 2s; 
 }
 
-/* ตั้งค่า keyframes สำหรับ fadeInOut */
+
 @keyframes fadeInOut {
     0% {
-        opacity: 0; /* เริ่มต้นจาง */
+        opacity: 0;
     }
     100% {
-        opacity: 1; /* จบด้วยการแสดงเต็มที่ */
+        opacity: 1; 
     }
 }
 
-/* เพิ่มฟังก์ชั่นการเคลื่อนย้ายการ์ดตามการเลื่อน */
+
 .card {
-  transition: transform 0.3s ease-in-out; /* ใช้การเลื่อนแบบ smooth */
+  transition: transform 0.3s ease-in-out; 
 }
 
 
+@media screen and (max-width: 1240px) {
+  body, html {
+    width: 100%;
+  }
+  .desktop-1 {
+    width: 100% !important;
+    padding: 0px !important;
+    margin: 0 auto;
+  }
+  .frame-container {
+    padding: 0px 76px;
+  }
+  .welcome-container-wrapper {
+    z-index: 5;
+    margin-left: 55%;
+  }
 
+  .container1 {
+    top: -43%;  
+    left: 50%; 
+    transform: translate(-50%, -50%);
+  }
+  .testimonial-container{
+    z-index: 10;
+    display: none;
+  }
+
+  
+}
 
 @media (max-width: 690px) {
   .container {
@@ -1109,78 +1148,43 @@ body, html {
   .iphone-14-15-pro-max-1 {
     display: none;
   }
+
+
+  
+  @media (max-width: 820px) {
+    .frame-container {
+      padding: 0px 0px !important; 
+    }
+
+    iframe {
+      width: 100%;
+      min-height: 1030px;
+      height: auto;
+      border: none;
+      margin-top: 1500px;
+  }
+  iframe {
+
+    margin-top: 30px !important;
+}
+    
+  }
   
 
   @media (max-width: 691px) {
     .iphone-14-15-pro-max-1 {
       display: block; 
     }
-    body, html {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      flex-wrap: nowrap;
-    }
-  }
 
-  
-  @media screen and (max-width: 1240px) {
-    body, html {
+    iframe {
       width: 100%;
-    }
-    .desktop-1 {
-      width: 78% !important;
-      padding: 0px !important;
-      margin: 0 auto;
-    }
-    .frame-container {
-      padding: 0px 76px;
-    }
-    .welcome-container-wrapper {
-      z-index: 5;
-      margin-left: 55%;
-
-      
-    }
-
-    .container1 {
-      top: -43%;  
-      left: 50%; 
-      transform: translate(-50%, -50%);
-    }
-    .testimonial-container{
-      z-index: 10;
-      display: none;
-    }
- 
+      min-height: 1030px;
+      height: auto;
+      border: none;
+      margin-top: 1500px !important;
   }
-  
-
-  /* @media screen and (min-width: 480px) and (max-width: 690px) {
-    body, html {
-      width: 100%;
-    }
-    .container1 {
-      top: -83%;  
-      left: 50%;
-      transform: translate(-50%, -50%); 
-    }
-    .desktop-1 {
-      padding: 0px 0px 135px !important;
-    }
-    .frame-container {
-      padding: 0px 4px;
-    }
-    .frame-div {
-      gap: 0px;
-    }
-    .testimonial-container-parent {
-      z-index: 10;
-      margin-top: 100px;
-    }
-    .frame-group {
-      gap: 115px;
-    }
+    
   }
-   */
+
+
+
