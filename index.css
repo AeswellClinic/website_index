@@ -189,7 +189,7 @@ body, html {
     background: linear-gradient(270deg, #d6d7d9, #5d5d5e);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* text-shadow: 2px 0 0#d6d7d9, 0 2px 0#d6d7d9, -2px 0 0#d6d7d9, 0-2px 0#d6d7d9; */
+   
   }
   .renewed3 {
     -webkit-text-stroke: 2px #7d7e7e;
@@ -1056,40 +1056,40 @@ body, html {
   display: block; 
 }
 
-/* ตั้งค่าอนิเมชั่นสำหรับการแสดงการ์ดแต่ละอัน */
+
 .overlayborderoverlayblur3,
 .overlayborderoverlayblur4,
 .overlayborderoverlayblur5{
     animation: fadeInOut 3s ease-in-out forwards;
-    opacity: 0; /* เริ่มต้นโดยให้การ์ดจางหายไป */
+    opacity: 0; 
 }
 
 /* หน่วงเวลาแสดงการ์ดแต่ละอัน */
 .overlayborderoverlayblur3 {
-    animation-delay: 0s; /* การ์ดแรกแสดงทันที */
+    animation-delay: 0s; 
 }
 
 .overlayborderoverlayblur4 {
-    animation-delay: 1s; /* การ์ดที่สองแสดงหลังจาก 1 วินาที */
+    animation-delay: 1s; 
 }
 
 .overlayborderoverlayblur5{
-    animation-delay: 2s; /* การ์ดที่สามแสดงหลังจาก 2 วินาที */
+    animation-delay: 2s; 
 }
 
-/* ตั้งค่า keyframes สำหรับ fadeInOut */
+
 @keyframes fadeInOut {
     0% {
-        opacity: 0; /* เริ่มต้นจาง */
+        opacity: 0; 
     }
     100% {
-        opacity: 1; /* จบด้วยการแสดงเต็มที่ */
+        opacity: 1; 
     }
 }
 
-/* เพิ่มฟังก์ชั่นการเคลื่อนย้ายการ์ดตามการเลื่อน */
+
 .card {
-  transition: transform 0.3s ease-in-out; /* ใช้การเลื่อนแบบ smooth */
+  transition: transform 0.3s ease-in-out;
 }
 
 
