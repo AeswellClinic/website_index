@@ -318,6 +318,19 @@
           </div>
         </div>
       </div>
+<script>
+  // ดักการเลื่อนของหน้าจอ
+window.addEventListener("scroll", function() {
+  const scrollY = window.scrollY; // ค่าการเลื่อนจากด้านบน
+  const cards = document.querySelectorAll(".overlayborderoverlayblur3, .overlayborderoverlayblur4, .overlayborderoverlayblur5");
 
+  // Loop ผ่านการ์ดแต่ละใบและปรับตำแหน่ง
+  cards.forEach((card, index) => {
+    // การเลื่อนการ์ดจะขึ้นอยู่กับการเลื่อนของผู้ใช้
+    card.style.transform = `translateY(${scrollY * 0.2}px)`;
+  });
+});
+
+</script>
   </body>
 </html>

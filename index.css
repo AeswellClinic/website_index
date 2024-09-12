@@ -1055,6 +1055,44 @@ body, html {
   display: block; 
 }
 
+/* ตั้งค่าอนิเมชั่นสำหรับการแสดงการ์ดแต่ละอัน */
+.overlayborderoverlayblur3,
+.overlayborderoverlayblur4,
+.overlayborderoverlayblur5{
+    animation: fadeInOut 3s ease-in-out forwards;
+    opacity: 0; /* เริ่มต้นโดยให้การ์ดจางหายไป */
+}
+
+/* หน่วงเวลาแสดงการ์ดแต่ละอัน */
+.overlayborderoverlayblur3 {
+    animation-delay: 0s; /* การ์ดแรกแสดงทันที */
+}
+
+.overlayborderoverlayblur4 {
+    animation-delay: 1s; /* การ์ดที่สองแสดงหลังจาก 1 วินาที */
+}
+
+.overlayborderoverlayblur5{
+    animation-delay: 2s; /* การ์ดที่สามแสดงหลังจาก 2 วินาที */
+}
+
+/* ตั้งค่า keyframes สำหรับ fadeInOut */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0; /* เริ่มต้นจาง */
+    }
+    100% {
+        opacity: 1; /* จบด้วยการแสดงเต็มที่ */
+    }
+}
+
+/* เพิ่มฟังก์ชั่นการเคลื่อนย้ายการ์ดตามการเลื่อน */
+.card {
+  transition: transform 0.3s ease-in-out; /* ใช้การเลื่อนแบบ smooth */
+}
+
+
+
 
 @media (max-width: 690px) {
   .container {
